@@ -1,0 +1,32 @@
+apply plugin: 'java'
+apply plugin: 'c'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+repositories {
+    mavenCentral()
+    maven { url "http://repo.spring.io/release" }
+}
+
+dependencies {
+    compile(
+    	"org.springframework:spring-context:4.1.4.RELEASE", 
+    	
+    	"org.springframework:spring-webmvc:4.1.4.RELEASE",
+    	"org.springframework:spring-web:4.1.4.RELEASE",
+    	
+    	"org.eclipse.jetty:jetty-webapp:9.2.7.v20150116",
+    	
+    	"com.fasterxml.jackson.core:jackson-databind:2.5.0",
+    	
+    	"net.java.dev.jna:jna:4.1.0", 
+    	"net.java.dev.jna:jna-platform:4.1.0")
+    	
+    testCompile("org.springframework:spring-test:4.1.4.RELEASE")
+}
+
+libraries {
+    inc {}
+}
